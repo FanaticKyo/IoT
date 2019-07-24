@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Temperature Subscriber</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/JavaScript" src="mqttws31.js"></script>
+        <script type="text/JavaScript" src="MQTTClient.js"></script> 
+    </head>
+    <body>
+        <h1>Temperature Subscriber</h1>
+        <div>
+            <table border="2">
+                <tbody>
+                    <tr><td><button style="height:30px;width:100px" id="cold" onclick="updateTemp('cold')">subscribe cold</button></td><td><button style="height:30px;width:110px" id="cold" onclick="unsubscribe('cold')">unsubscribe cold</button></td><td>Cold temperature:</td><td><span id="coldTemp"></span></td><td>Update Time:</td><td><span id="coldTempTime"></span></td></tr>
+                    <tr><td><button style="height:30px;width:100px" id="nice" onclick="updateTemp('nice')">subscribe nice</button></td><td><button style="height:30px;width:110px" id="cold" onclick="unsubscribe('nice')">unsubscribe nice</button></td><td>Nice temperature:</td><td><span id="niceTemp"></span></td><td>Update Time:</td><td><span id="niceTempTime"></span></td></tr>
+                    <tr><td><button style="height:30px;width:100px" id="hot" onclick="updateTemp('hot')">subscribe hot</button></td><td><button style="height:30px;width:110px" id="cold" onclick="unsubscribe('hot')">unsubscribe hot</button></td><td>Hot temperature:</td><td><span id="hotTemp"></span></td><td>Update Time:</td><td><span id="hotTempTime"></span></td></tr>
+                </tbody>
+            </table>
+            <button style="height:50px;width:100px" onclick="updateAll()">subscribe all</button>
+            <button style="height:50px;width:100px" onclick="unsubscribe()">unsubscribe all</button>
+        </div>
+
+    </body>
+</html>

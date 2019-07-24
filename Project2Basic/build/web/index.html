@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/*create the rectangle area*/
+div {
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<!--call the myFunction when mouse moves into the rectangle, and call clearCoor when the mouse moves out-->
+<div onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+<!--the text being showed on the web page-->
+<p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
+
+<p>When the mouse is moved over the div, the p element will display the horizontal and vertical coordinates of your mouse pointer, whose values are returned from the clientX and clientY properties on the 
+MouseEvent object.</p>
+
+<p id="demo"></p>
+<!--the javascripts that run in the browser-->
+<script>
+function myFunction(e) {
+  // get the x and y coordinates of the cursor
+  var x = e.clientX;
+  var y = e.clientY;
+  var coor = "Coordinates: (" + x + "," + y + ")";
+  // change the contents in the demo tag
+  document.getElementById("demo").innerHTML = coor;
+}
+
+function clearCoor() {
+  // clean the text in demo area
+  document.getElementById("demo").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
+
